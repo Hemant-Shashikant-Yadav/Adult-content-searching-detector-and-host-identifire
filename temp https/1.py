@@ -17,16 +17,11 @@ full_packets = extract_packets_from_pcap(pcap_file)
 for packet in full_packets:
     print(f"Packet Number: {packet.number}")
 
-    # Check if the packet has an IP layer
     if 'IP' in packet:
-        # Access the sender's IP address (source IP)
         sender_ip = packet.ip.src
-        # Access the sender's port
         sender_port = packet[packet.transport_layer].srcport
 
-        # Access the receiver's IP address (destination IP)
         receiver_ip = packet.ip.dst
-        # Access the received port
         received_port = packet[packet.transport_layer].dstport
 
         if sender_ip is not None:

@@ -19,10 +19,6 @@ b = a[27][3]
 
 print(type(b))
 print(dir(b))
-# Assuming b is an instance of XmlLayer
-# Print the attributes and methods of the XmlLayer object
-
-# Access the 'tls_handshake_extensions_server_name' attribute
 tls_handshake_extensions_server_name = getattr(b, 'handshake_extensions_server_name', None)
 
 if tls_handshake_extensions_server_name is not None:
