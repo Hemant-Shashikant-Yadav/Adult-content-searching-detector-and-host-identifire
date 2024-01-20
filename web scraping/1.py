@@ -26,7 +26,6 @@ def get_website_info(url):
         return None
 
 
-# Example usage
 url_to_check = 'http://pageometry.weebly.com'
 website_info = get_website_info(url_to_check)
 
